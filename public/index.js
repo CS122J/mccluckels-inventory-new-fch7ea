@@ -112,9 +112,11 @@ const orderDetails = {
   },
   process() {
     /* WRITE YOUR CODE HERE - Then remove the console.log */
-    console.log(
-      `Bug #3: Write a METHOD that depletes the inventory by using the 'items' array in the orderDetails object.`
-    )
+    this.items.forEach(({ itemname, count }) => {
+      for ([ingredient, amount] of Object.entries(mealIngredients[itemname])) {
+        inventory[ingredient].qty -= amount * count;
+      }
+    })
   },
 }
 
