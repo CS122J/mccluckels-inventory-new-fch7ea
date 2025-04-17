@@ -125,6 +125,7 @@ const orderDetails = {
 
 const restockAndDisplay = () => {
   /* WRITE YOUR CODE HERE - Then remove the console.log */
+  inventory.restock(resupplyLevels);
   console.log(
     "Bug #2: Invoke the inventory object METHOD that restocks according to prescribed supply levels for each ingredient. Be sure to include the required (object) argument."
   )
@@ -191,6 +192,7 @@ myForm.addEventListener("submit", formSubmit)
 
 document.addEventListener("DOMContentLoaded", () => {
   /* WRITE YOUR CODE HERE - Then remove the console.log */
+  restockAndDisplay();
   console.log(
     `Bug #1: Call the STANDALONE function that kicks off restocking and displaying of inventory.`
   )
